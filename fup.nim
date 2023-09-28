@@ -14,12 +14,12 @@ iterator walk(dir: string, kinds = {pcFile, pcDir}): (string, string, string) =
     if kind in kinds:
       yield splitFile(path)
 
-proc fup0(args: seq[string], 
+proc fup0(patterns: seq[string], 
   exact = false, full = false, file = false, dir = false, incl = false,
   level = maxInt32, num = maxInt32,
   workdir = "") = 
   let
-    filters = if args.len == 0: @[""] else: args
+    filters = if patterns.len == 0: @[""] else: patterns
     kinds = if file: {pcFile} elif dir: {pcDir} else: {pcFile, pcDir}
   var 
     depth = 0
