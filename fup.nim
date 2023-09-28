@@ -1,10 +1,8 @@
 import os, terminal
 from strutils import contains
 
-
 const 
   maxInt32 = high(int32)
-
 
 template match(s: string, filter: string, exact: bool): bool = 
   (exact and s == filter) or (not exact and s.contains(filter))
