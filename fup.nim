@@ -16,12 +16,10 @@ iterator walk(dir: string, kinds = {pcFile, pcDir}): (string, string, string) =
 
 proc fup0(patterns: seq[string], 
   exact = false, full = false, file = false, dir = false, incl = false,
-  level = maxInt32, num = maxInt32,
-  workdir = "") = 
-  let
+  level = maxInt32, num = maxInt32, workdir = "") = 
+  var
     filters = if patterns.len == 0: @[""] else: patterns
     kinds = if file: {pcFile} elif dir: {pcDir} else: {pcFile, pcDir}
-  var 
     depth = 0
     matches = 0
     workdir = if workdir.len == 0: getCurrentDir() else: workdir
