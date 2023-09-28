@@ -4,7 +4,7 @@
 Find files in parent directories
 
 ```bash
-fup [optional-params] [args: string...]
+fup [optional-params] [patterns: string...]
    find paths in parent directories
 Options:
   -h, --help                           print this cligen-erated help
