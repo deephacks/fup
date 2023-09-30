@@ -35,4 +35,4 @@ Options:
 
 By default, Nim builds dynamically linked binaries using the glibc version present on the OS where those binaries are built.
 
-Building fully cross-compiled static musl binaries is possible using [nim2-buildroot-toolchain](https://github.com/deephacks/nim2-buildroot-toolchain), which provide a fully automated toolchain using docker and [buildroot](https://buildroot.org/).
+Building fully static and cross-compiled musl binaries is possible using [nim2-buildroot-toolchain](https://github.com/deephacks/nim2-buildroot-toolchain), which provide a fully automated toolchain using docker and [buildroot](https://buildroot.org/).
