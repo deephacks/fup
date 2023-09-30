@@ -18,13 +18,21 @@ Options:
   -w=, --workdir=  string  ""          set workdir
 ```
 
-
 ## build
 
 1. Install [Nim v2.0](https://nim-lang.org/blog/2023/08/01/nim-v20-released.html) using [choosenim](https://github.com/dom96/choosenim) to `~/.choosenim`
    
    `curl https://nim-lang.org/choosenim/init.sh -sSf | sh`
 
-2. install executable executable to `~/.nimble/bin`
+2. install executable `fup` to `~/.nimble/bin`
    
    `nimble install`
+
+3. Make sure `$PATH` contains `~/.nimble/bin`
+
+
+## note
+
+By default, Nim builds dynamically linked binaries using the glibc version present on the OS where those binaries are built.
+
+Building fully cross-compiled static musl binaries is possible using [nim2-buildroot-toolchain](https://github.com/deephacks/nim2-buildroot-toolchain), which provide a fully automated toolchain using docker and [buildroot](https://buildroot.org/).
