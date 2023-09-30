@@ -18,3 +18,13 @@ Options:
   -w=, --workdir=  string  ""          set workdir
 ```
 
+
+## build
+
+1. Install [Nim v2.0](https://nim-lang.org/blog/2023/08/01/nim-v20-released.html) using [choosenim](https://github.com/dom96/choosenim) to `~/.choosenim`
+   
+   `curl https://nim-lang.org/choosenim/init.sh -sSf | sh`
+
+2. install executable executable to `~/.nimble/bin`
+   
+   `nimble install`
